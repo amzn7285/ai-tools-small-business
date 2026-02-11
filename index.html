@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -188,10 +188,92 @@ header p {
   }
 }
 
+/* Ad Banner */
+.ad-banner {
+  background: linear-gradient(135deg, #fff3cd, #ffe4a1);
+  border: 2px dashed var(--warning);
+  padding: 25px;
+  text-align: center;
+  margin: -20px auto 40px;
+  max-width: 1200px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #92400e;
+  position: relative;
+  z-index: 5;
+}
+
+.ad-banner i {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  color: var(--warning);
+}
+
+/* Sponsored Section */
+.sponsored-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 2rem;
+}
+
+.sponsored-card {
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+  border: 2px solid var(--primary);
+  border-radius: 24px;
+  padding: 3rem;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(99, 102, 241, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.sponsored-card::before {
+  content: '⭐';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 3rem;
+  opacity: 0.2;
+}
+
+.sponsored-card h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.sponsored-card p {
+  font-size: 1.2rem;
+  color: var(--dark-light);
+  margin-bottom: 1.5rem;
+}
+
+.sponsored-cta {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+}
+
+.sponsored-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(99, 102, 241, 0.4);
+}
+
 /* Search Bar */
 .search-section {
   max-width: 1200px;
-  margin: -40px auto 60px;
+  margin: 0 auto 60px;
   padding: 0 2rem;
   position: relative;
   z-index: 10;
@@ -433,6 +515,11 @@ section {
   color: white;
 }
 
+.badge.new {
+  background: linear-gradient(135deg, #14b8a6, #0d9488);
+  color: white;
+}
+
 .card p {
   color: var(--gray);
   font-size: 1rem;
@@ -481,6 +568,96 @@ section {
 .visit-btn:hover {
   transform: translateX(3px);
   box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+}
+
+/* Submit Form Section */
+.submit-section {
+  background: var(--light);
+  padding: 80px 20px;
+}
+
+.submit-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.submit-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.submit-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.submit-header p {
+  font-size: 1.2rem;
+  color: var(--gray);
+}
+
+.submit-form {
+  background: white;
+  padding: 3rem;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--dark-light);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-form button {
+  width: 100%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 1.25rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+}
+
+.submit-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(99, 102, 241, 0.4);
 }
 
 /* CTA Section */
@@ -659,6 +836,14 @@ footer {
   .cta-section h2 {
     font-size: 2rem;
   }
+  
+  .sponsored-card {
+    padding: 2rem;
+  }
+  
+  .submit-form {
+    padding: 2rem;
+  }
 }
 </style>
 </head>
@@ -675,6 +860,8 @@ footer {
       <a href="#chatbots">Chatbots</a>
       <a href="#marketing">Marketing</a>
       <a href="#automation">Automation</a>
+      <a href="#development">Development</a>
+      <a href="#design">Design</a>
       <a href="#submit" class="submit-btn">Submit Tool</a>
     </div>
   </div>
@@ -684,7 +871,7 @@ footer {
 <header>
   <div class="header-content">
     <h1>Discover the Best AI Tools for 2026</h1>
-    <p>Curated collection of AI chatbots, marketing tools, and automation platforms to supercharge your business growth.</p>
+    <p>Curated collection of AI chatbots, marketing tools, automation platforms, development assistants, and design tools to supercharge your business growth.</p>
     
     <div class="header-stats">
       <div class="stat-item">
@@ -703,6 +890,26 @@ footer {
   </div>
 </header>
 
+<!-- Ad Banner -->
+<div class="ad-banner">
+  <i class="bi bi-megaphone-fill"></i>
+  <strong>Premium Ad Space Available (728x90)</strong> – Google AdSense / Sponsored Placement
+</div>
+
+<!-- Sponsored Section -->
+<div class="sponsored-section">
+  <div class="sponsored-card">
+    <h2>
+      <i class="bi bi-star-fill"></i>
+      Featured Tool Placement
+    </h2>
+    <p>Get premium homepage visibility and reach thousands of potential customers actively searching for AI solutions.</p>
+    <a href="#submit" class="sponsored-cta">
+      List Your Tool Here <i class="bi bi-arrow-right"></i>
+    </a>
+  </div>
+</div>
+
 <!-- Search Section -->
 <div class="search-section">
   <div class="search-container">
@@ -716,7 +923,7 @@ footer {
 
 <!-- Categories Navigation -->
 <div class="categories-nav">
-  <a href="#chatbots" class="category-pill active">
+  <a href="#chatbots" class="category-pill">
     <i class="bi bi-chat-dots"></i> Chatbots
   </a>
   <a href="#marketing" class="category-pill">
@@ -725,10 +932,10 @@ footer {
   <a href="#automation" class="category-pill">
     <i class="bi bi-gear"></i> Automation
   </a>
-  <a href="#" class="category-pill">
+  <a href="#development" class="category-pill">
     <i class="bi bi-code-slash"></i> Development
   </a>
-  <a href="#" class="category-pill">
+  <a href="#design" class="category-pill">
     <i class="bi bi-palette"></i> Design
   </a>
 </div>
@@ -1122,12 +1329,404 @@ footer {
   </div>
 </section>
 
+<!-- Development AI Section -->
+<section id="development">
+  <div class="container">
+    <div class="category-header">
+      <div class="category-title">
+        <div class="category-icon" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
+          <i class="bi bi-code-slash"></i>
+        </div>
+        AI Development Tools
+      </div>
+      <div class="tool-count">5 tools</div>
+    </div>
+    
+    <div class="grid">
+      <div class="card">
+        <div class="card-header">
+          <div class="tool-info">
+            <div class="tool-logo" style="background: linear-gradient(135deg, #6366f1, #4f46e5);">
+              <i class="bi bi-github"></i>
+            </div>
+            <h3>GitHub Copilot</h3>
+            <div class="badges">
+              <span class="badge popular">Popular</span>
+              <span class="badge paid">Paid</span>
+            </div>
+          </div>
+        </div>
+        <p>AI pair programmer that suggests code and entire functions. Supports multiple languages and IDEs for faster development.</p>
+        <div class="card-footer">
+          <div class="rating">
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+            </div>
+            <span>4.7 (15.2K)</span>
+          </div>
+          <a href="https://github.com/features/copilot" target="_blank" class="visit-btn">
+            Visit <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="tool-info">
+            <div class="tool-logo" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+              <i class="bi bi-terminal"></i>
+            </div>
+            <h3>Cursor</h3>
+            <div class="badges">
+              <span class="badge featured">Featured</span>
+              <span class="badge new">New</span>
+            </div>
+          </div>
+        </div>
+        <p>AI-first code editor built for pair programming with AI. Chat with your codebase and generate code with natural language.</p>
+        <div class="card-footer">
+          <div class="rating">
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <span>4.9 (8.3K)</span>
+          </div>
+          <a href="https://cursor.sh" target="_blank" class="visit-btn">
+            Visit <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="tool-info">
+            <div class="tool-logo" style="background: linear-gradient(135deg, #10b981, #059669);">
+              <i class="bi bi-braces"></i>
+            </div>
+            <h3>Tabnine</h3>
+            <div class="badges">
+              <span class="badge free">Freemium</span>
+            </div>
+          </div>
+        </div>
+        <p>AI code completion tool trained on millions of open-source repositories. Works with all major IDEs and languages.</p>
+        <div class="card-footer">
+          <div class="rating">
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+            </div>
+            <span>4.5 (6.7K)</span>
+          </div>
+          <a href="https://www.tabnine.com" target="_blank" class="visit-btn">
+            Visit <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="tool-info">
+            <div class="tool-logo" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+              <i class="bi bi-lightbulb"></i>
+            </div>
+            <h3>Replit AI</h3>
+            <div class="badges">
+              <span class="badge popular">Popular</span>
+              <span class="badge free">Freemium</span>
+            </div>
+          </div>
+        </div>
+        <p>AI-powered collaborative coding platform. Build, deploy, and host projects with AI assistance directly in the browser.</p>
+        <div class="card-footer">
+          <div class="rating">
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+            </div>
+            <span>4.6 (5.4K)</span>
+          </div>
+          <a href="https://replit.com" target="_blank" class="visit-btn">
+            Visit <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="tool-info">
+            <div class="tool-logo" style="background: linear-gradient(135deg, #ec4899, #db2777);">
+              <i class="bi bi-bug"></i>
+            </div>
+            <h3>Phind</h3>
+            <div class="badges">
+              <span class="badge free">Free</span>
+            </div>
+          </div>
+        </div>
+        <p>AI search engine for developers. Get instant answers to coding questions with explanations and code examples.</p>
+        <div class="card-footer">
+          <div class="rating">
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+            </div>
+            <span>4.7 (4.1K)</span>
+          </div>
+          <a href="https://www.phind.com" target="_blank" class="visit-btn">
+            Visit <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Design AI Section -->
+<section id="design">
+  <div class="container">
+    <div class="category-header">
+      <div class="category-title">
+        <div class="category-icon" style="background: linear-gradient(135deg, #ec4899, #f472b6);">
+          <i class="bi bi-palette"></i>
+        </div>
+        AI Design Tools
+      </div>
+      <div class="tool-count">5 tools</div>
+    </div>
+    
+    <div class="grid">
+      <div class="card">
+        <div class="card-header">
+          <div class="tool-info">
+            <div class="tool-logo" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+              <i class="bi bi-image"></i>
+            </div>
+            <h3>Midjourney</h3>
+            <div class="badges">
+              <span class="badge popular">Popular</span>
+              <span class="badge paid">Paid</span>
+            </div>
+          </div>
+        </div>
+        <p>AI image generation tool for creating stunning artwork, illustrations, and designs from text descriptions.</p>
+        <div class="card-footer">
+          <div class="rating">
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <span>4.8 (22.5K)</span>
+          </div>
+          <a href="https://www.midjourney.com" target="_blank" class="visit-btn">
+            Visit <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="tool-info">
+            <div class="tool-logo" style="background: linear-gradient(135deg, #10b981, #059669);">
+              <i class="bi bi-paint-bucket"></i>
+            </div>
+            <h3>DALL-E 3</h3>
+            <div class="badges">
+              <span class="badge featured">Featured</span>
+              <span class="badge paid">Paid</span>
+            </div>
+          </div>
+        </div>
+        <p>OpenAI's advanced AI image generator. Create realistic images and art from detailed text prompts with high accuracy.</p>
+        <div class="card-footer">
+          <div class="rating">
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+            </div>
+            <span>4.7 (18.3K)</span>
+          </div>
+          <a href="https://openai.com/dall-e-3" target="_blank" class="visit-btn">
+            Visit <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="tool-info">
+            <div class="tool-logo" style="background: linear-gradient(135deg, #06b6d4, #0891b2);">
+              <i class="bi bi-brush"></i>
+            </div>
+            <h3>Canva AI</h3>
+            <div class="badges">
+              <span class="badge popular">Popular</span>
+              <span class="badge free">Freemium</span>
+            </div>
+          </div>
+        </div>
+        <p>AI-powered design platform with Magic Design, background remover, and text-to-image generation for quick creatives.</p>
+        <div class="card-footer">
+          <div class="rating">
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <span>4.9 (35.7K)</span>
+          </div>
+          <a href="https://www.canva.com" target="_blank" class="visit-btn">
+            Visit <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="tool-info">
+            <div class="tool-logo" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+              <i class="bi bi-grid-3x3"></i>
+            </div>
+            <h3>Figma AI</h3>
+            <div class="badges">
+              <span class="badge featured">Featured</span>
+              <span class="badge free">Freemium</span>
+            </div>
+          </div>
+        </div>
+        <p>AI features in Figma for UI/UX design. Auto-layout suggestions, design system automation, and collaborative prototyping.</p>
+        <div class="card-footer">
+          <div class="rating">
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+            </div>
+            <span>4.7 (12.9K)</span>
+          </div>
+          <a href="https://www.figma.com" target="_blank" class="visit-btn">
+            Visit <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="tool-info">
+            <div class="tool-logo" style="background: linear-gradient(135deg, #ec4899, #db2777);">
+              <i class="bi bi-stars"></i>
+            </div>
+            <h3>Runway ML</h3>
+            <div class="badges">
+              <span class="badge new">New</span>
+              <span class="badge paid">Paid</span>
+            </div>
+          </div>
+        </div>
+        <p>AI video editing and generation platform. Create videos from text, remove backgrounds, and apply creative AI effects.</p>
+        <div class="card-footer">
+          <div class="rating">
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+            </div>
+            <span>4.6 (7.8K)</span>
+          </div>
+          <a href="https://runwayml.com" target="_blank" class="visit-btn">
+            Visit <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Submit Form Section -->
+<section id="submit" class="submit-section">
+  <div class="submit-container">
+    <div class="submit-header">
+      <h2>Submit Your AI Tool</h2>
+      <p>Get your tool in front of thousands of potential customers. Quick review process and premium visibility options available.</p>
+    </div>
+    
+    <form class="submit-form" action="#" method="POST">
+      <div class="form-group">
+        <label for="tool-name">Tool Name *</label>
+        <input type="text" id="tool-name" name="tool-name" placeholder="Enter your AI tool name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="website-url">Website URL *</label>
+        <input type="url" id="website-url" name="website-url" placeholder="https://yourtool.com" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="category">Category *</label>
+        <select id="category" name="category" required>
+          <option value="">Select Category</option>
+          <option value="chatbots">AI Chatbots</option>
+          <option value="marketing">Marketing AI</option>
+          <option value="automation">Automation</option>
+          <option value="development">AI Development Tools</option>
+          <option value="design">AI Design Tools</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="description">Short Description *</label>
+        <textarea id="description" name="description" placeholder="Describe your AI tool in 1-2 sentences..." required></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Your Email Address *</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+      </div>
+      
+      <button type="submit">
+        Submit Tool for Review <i class="bi bi-arrow-right"></i>
+      </button>
+    </form>
+  </div>
+</section>
+
 <!-- CTA Section -->
-<section class="cta-section" id="submit">
+<section class="cta-section">
   <div class="cta-content">
-    <h2>Want to List Your AI Tool?</h2>
-    <p>Get discovered by thousands of potential customers actively searching for AI solutions.</p>
-    <a href="#" class="cta-btn">Submit Your Tool <i class="bi bi-arrow-right"></i></a>
+    <h2>Want Premium Visibility?</h2>
+    <p>Get featured on our homepage and reach thousands of potential customers actively searching for AI solutions.</p>
+    <a href="#submit" class="cta-btn">
+      Upgrade to Featured Listing <i class="bi bi-arrow-right"></i>
+    </a>
   </div>
 </section>
 
@@ -1151,15 +1750,15 @@ footer {
         <li><a href="#chatbots">AI Chatbots</a></li>
         <li><a href="#marketing">Marketing AI</a></li>
         <li><a href="#automation">Automation</a></li>
-        <li><a href="#">Development</a></li>
-        <li><a href="#">Design Tools</a></li>
+        <li><a href="#development">Development</a></li>
+        <li><a href="#design">Design Tools</a></li>
       </ul>
     </div>
     
     <div class="footer-section">
       <h3>Resources</h3>
       <ul>
-        <li><a href="#">Submit Tool</a></li>
+        <li><a href="#submit">Submit Tool</a></li>
         <li><a href="#">Blog</a></li>
         <li><a href="#">AI News</a></li>
         <li><a href="#">Guides</a></li>
